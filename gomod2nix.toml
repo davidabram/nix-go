@@ -1,0 +1,6 @@
+schema = 3
+
+[mod]
+  [mod."github.com/go-chi/chi/v5"]
+    version = "v5.2.3"
+    hash = "sha256-fB8KidqJgWrPnnS+0uIKVOO1VRclD6nG1Lt1IeSq2M0="
