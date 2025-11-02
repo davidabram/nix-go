@@ -1,27 +1,23 @@
-# Binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
 *.test
 
-# Output of the go coverage tool
 *.out
+coverage.txt
+coverage.html
 
-# Go workspace file
 go.work
+go.work.sum
 
-# Dependency directories
 vendor/
 
-# Build output
 result
 result-*
 
-# IDE and editor files
 .vscode/
 .idea/
 *.swp
@@ -29,5 +25,12 @@ result-*
 *~
 .DS_Store
 
-# Compiled binary
 chi-app
+
+tmp/
+build-errors.log
+
+.direnv/
+.envrc
+
+__debug_bin
