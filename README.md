@@ -46,10 +46,36 @@ Build the application:
 nix build
 ```
 
-The binary will be available at `./result/bin/myapp`:
+The binary will be available at `./result/bin/chi-app`:
 
 ```bash
-./result/bin/myapp
+./result/bin/chi-app
+```
+
+### Building the Docker Image
+
+Build a Docker image (Alpine-based):
+
+```bash
+nix build .#docker
+```
+
+This creates a reproducible Docker image tarball at `./result`. Load it into Docker:
+
+```bash
+docker load < result
+```
+
+Run the container:
+
+```bash
+docker run -p 8080:8080 chi-app:latest
+```
+
+Or with a custom port:
+
+```bash
+docker run -p 3000:3000 -e ADDR=:3000 chi-app:latest
 ```
 
 ## Available Commands
@@ -85,5 +111,3 @@ gomod2nix
 ```
 
 This regenerates `gomod2nix.toml` with the latest dependency information.
-
-runs on NixCI?
