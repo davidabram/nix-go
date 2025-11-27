@@ -85,3 +85,5 @@ gomod2nix
 ```
 
 This regenerates `gomod2nix.toml` with the latest dependency information.
+
+runs on NixCI?
